@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.web.commander.utils;
+package com.beautysalon.web.commander.utils;
 
 public interface Operation {
     String LOGIN = "/view/login";

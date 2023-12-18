@@ -1,6 +1,8 @@
-package com.example.beautysaloneeservlets.model.entity;
+package com.beautysalon.model.entity;
 
-import com.example.beautysaloneeservlets.model.entity.enums.Status;
+
+
+import com.beautysalon.model.entity.enums.Status;
 
 import java.sql.Timestamp;
 
@@ -117,25 +119,7 @@ public class Order extends Entity {
     }
 
     // TODO find the place for this method
-    public static Integer getNumberOfStatus(Status status) {
-        return switch (status) {
-            case CREATED -> 1;
-            case PAID -> 2;
-            case DONE -> 3;
-            case CANCELED -> 4;
-        };
-    }
 
-    // TODO find the place for this method
-    public static Status getStatusByNumber(Integer statusNumber) {
-        return switch (statusNumber) {
-            case 1 -> Status.CREATED;
-            case 2 -> Status.PAID;
-            case 3 -> Status.DONE;
-            case 4 -> Status.CANCELED;
-            default -> throw new RuntimeException("There are no such status by Number");
-        };
-    }
 
     @Override
     public String toString() {

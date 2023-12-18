@@ -1,10 +1,12 @@
-package com.example.beautysaloneeservlets.web.commander.master;
+package com.beautysalon.web.commander.master;
 
-import com.example.beautysaloneeservlets.model.DAO.OrderDAO;
-import com.example.beautysaloneeservlets.model.entity.Order;
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.web.commander.Command;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+
+
+import com.beautysalon.model.DAO.OrderDAO;
+import com.beautysalon.model.entity.Order;
+import com.beautysalon.model.entity.User;
+import com.beautysalon.web.commander.Command;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

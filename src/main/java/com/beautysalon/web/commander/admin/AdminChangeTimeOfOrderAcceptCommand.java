@@ -1,11 +1,11 @@
-package com.example.beautysaloneeservlets.web.commander.admin;
+package com.beautysalon.web.commander.admin;
 
-import com.example.beautysaloneeservlets.model.DAO.OrderDAO;
-import com.example.beautysaloneeservlets.model.DAO.UserDAO;
-import com.example.beautysaloneeservlets.model.entity.Order;
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.web.commander.Command;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+import com.beautysalon.model.DAO.OrderDAO;
+import com.beautysalon.model.DAO.UserDAO;
+import com.beautysalon.model.entity.Order;
+import com.beautysalon.model.entity.User;
+import com.beautysalon.web.commander.Command;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +15,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.beautysaloneeservlets.web.commander.OrderServiceCommand.NO_MASTER_FOR_THIS_DAY_PARAMETER;
+import static com.beautysalon.web.commander.OrderMasterCommand.NO_MASTER_FOR_THIS_DAY_PARAMETER;
 
 
 public class AdminChangeTimeOfOrderAcceptCommand implements Command {

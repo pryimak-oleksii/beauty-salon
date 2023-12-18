@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.filter;
+package com.beautysalon.filter;
 
 
 import javax.servlet.*;
@@ -24,7 +24,7 @@ public class LanguageFilter implements Filter {
 
         String path = req.getRequestURI();
 
-        if (path.equals("/beauty_salonEE_servlets_war_exploded/")) {
+        if (path.equals("/beautysalon_war_exploded/")) {
             path = "/view/main";
         } else {
             path = path.substring(path.indexOf("view") - 1);

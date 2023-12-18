@@ -1,7 +1,9 @@
-package com.example.beautysaloneeservlets.model.entity;
+package com.beautysalon.model.entity;
 
-import com.example.beautysaloneeservlets.model.entity.enums.Days;
-import com.example.beautysaloneeservlets.model.entity.enums.Role;
+
+
+import com.beautysalon.model.entity.enums.Days;
+import com.beautysalon.model.entity.enums.Role;
 
 import java.util.HashMap;
 import java.util.List;

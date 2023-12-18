@@ -1,9 +1,10 @@
-package com.example.beautysaloneeservlets.model.DAO;
+package com.beautysalon.model.DAO;
 
-import com.example.beautysaloneeservlets.db.DBHelper;
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.model.entity.enums.Days;
-import com.example.beautysaloneeservlets.model.entity.enums.Role;
+
+import com.beautysalon.db.DBHelper;
+import com.beautysalon.model.entity.User;
+import com.beautysalon.model.entity.enums.Days;
+import com.beautysalon.model.entity.enums.Role;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,8 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static com.example.beautysaloneeservlets.web.commander.utils.CommandUtil.getNumberOfRole;
-import static com.example.beautysaloneeservlets.web.commander.utils.CommandUtil.getRoleByNumber;
+import static com.beautysalon.web.commander.utils.CommandUtil.getNumberOfRole;
+import static com.beautysalon.web.commander.utils.CommandUtil.getRoleByNumber;
 
 public class UserDAO {
 

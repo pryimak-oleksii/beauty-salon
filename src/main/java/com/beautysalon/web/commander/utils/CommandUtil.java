@@ -1,8 +1,9 @@
-package com.example.beautysaloneeservlets.web.commander.utils;
+package com.beautysalon.web.commander.utils;
 
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.model.entity.enums.Role;
-import com.example.beautysaloneeservlets.model.entity.enums.Status;
+
+import com.beautysalon.model.entity.User;
+import com.beautysalon.model.entity.enums.Role;
+import com.beautysalon.model.entity.enums.Status;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

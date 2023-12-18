@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.filter;
+package com.beautysalon.filter;
 
 
 import javax.servlet.*;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AuthorizationFilter implements Filter {
 
-
+    // TODO try to turn in it on
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 

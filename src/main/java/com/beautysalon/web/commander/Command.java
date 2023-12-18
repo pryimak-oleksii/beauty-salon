@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.web.commander;
+package com.beautysalon.web.commander;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

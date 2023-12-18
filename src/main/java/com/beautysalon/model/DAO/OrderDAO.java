@@ -1,25 +1,21 @@
-package com.example.beautysaloneeservlets.model.DAO;
+package com.beautysalon.model.DAO;
 
-import com.example.beautysaloneeservlets.db.DBHelper;
-import com.example.beautysaloneeservlets.model.entity.Order;
-import com.example.beautysaloneeservlets.model.entity.enums.Status;
+
+import com.beautysalon.db.DBHelper;
+import com.beautysalon.model.entity.Order;
+import com.beautysalon.model.entity.enums.Status;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.beautysaloneeservlets.model.entity.Order.getNumberOfStatus;
+import static com.beautysalon.constants.globalConstants.*;
+import static com.beautysalon.model.DAO.DAOUtils.getNumberOfStatus;
+import static com.beautysalon.model.DAO.DAOUtils.getStatusByNumber;
+
+
 
 public class OrderDAO {
-
-
-    public static final String SQL_ADD_ORDER = "INSERT INTO orders" +
-            "(client_id, master_id, service_id, status_id, reservation_time) VALUES(?,?,?,?,?)";
-    public static final String SQL_SELECT_ALL_ORDERS = "SELECT * FROM orders";
-    public static final String SQL_SELECT_ORDER_BY_ID = "SELECT * FROM orders WHERE order_id=(?)";
-    public static final String SQL_UPDATE_ORDER_STATUS_BY_id = "UPDATE orders SET status_id=(?) WHERE order_id=(?)";
-    public static final String SQL_UPDATE_TIME_STATUS_BY_id = "UPDATE orders SET reservation_time=(?) WHERE order_id=(?)";
-
 
     public OrderDAO(UserDAO userDAO, ServiceDAO serviceDAO) {
         this.userDAO = userDAO;
@@ -49,7 +45,6 @@ public class OrderDAO {
         try (Connection connection = DBHelper.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_TIME_STATUS_BY_id)
         ) {
-
             statement.setTimestamp(1, newTime);
             statement.setInt(2, orderId);
             statement.executeLargeUpdate();
@@ -70,7 +65,7 @@ public class OrderDAO {
                 order.setClientId(rs.getInt("client_id"));
                 order.setMasterId(rs.getInt("master_id"));
                 order.setServiceId(rs.getInt("service_id"));
-                order.setStatus(Order.getStatusByNumber(rs.getInt("status_id")));
+                order.setStatus(getStatusByNumber(rs.getInt("status_id")));
                 order.setReservationTime(rs.getTimestamp("reservation_time"));
                 order.setFeedBack(rs.getString("feed_back"));
             }
@@ -79,7 +74,6 @@ public class OrderDAO {
         }
         return order;
     }
-
 
 
     public List<Order> findAllOrders() {
@@ -97,7 +91,7 @@ public class OrderDAO {
                 order.setClientId(rs.getInt("client_id"));
                 order.setMasterId(rs.getInt("master_id"));
                 order.setServiceId(rs.getInt("service_id"));
-                order.setStatus(Order.getStatusByNumber(rs.getInt("status_id")));
+                order.setStatus(getStatusByNumber(rs.getInt("status_id")));
                 order.setReservationTime(rs.getTimestamp("reservation_time"));
                 order.setFeedBack(rs.getString("feed_back"));
                 orderList.add(order);
@@ -110,7 +104,7 @@ public class OrderDAO {
     }
 
     public List<Order> findAllOrdersInfo() {
-// TODO add join
+
         List<Order> orderList = new ArrayList<>();
         try (Connection connection = DBHelper.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_SELECT_ALL_ORDERS)) {
@@ -122,7 +116,7 @@ public class OrderDAO {
                 order.setClientName(userDAO.getUserById(rs.getInt("client_id")).getName());
                 order.setMasterName(userDAO.getUserById(rs.getInt("master_id")).getName());
                 order.setServiceName(serviceDAO.getServiceById(rs.getInt("service_id")).getName());
-                order.setStatus(Order.getStatusByNumber(rs.getInt("status_id")));
+                order.setStatus(getStatusByNumber(rs.getInt("status_id")));
                 order.setReservationTime(rs.getTimestamp("reservation_time"));
                 order.setFeedBack(rs.getString("feed_back"));
                 order.setMasterId(rs.getInt("master_id"));
@@ -137,7 +131,7 @@ public class OrderDAO {
     }
 
     public boolean addOrder(Order order) {
-
+// TODO do i need return statement here?
         try (Connection connection = DBHelper.getInstance().getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_ADD_ORDER)) {
             statement.setInt(1, order.getClientId());
@@ -151,6 +145,7 @@ public class OrderDAO {
         } catch (SQLException exception) {
             throw new RuntimeException("add order failed", exception);
         }
+
 
     }
 

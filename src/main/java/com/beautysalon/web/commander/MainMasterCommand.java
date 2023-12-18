@@ -1,11 +1,14 @@
-package com.example.beautysaloneeservlets.web.commander;
+package com.beautysalon.web.commander;
 
-import com.example.beautysaloneeservlets.model.DAO.ServiceDAO;
-import com.example.beautysaloneeservlets.model.DAO.UserDAO;
-import com.example.beautysaloneeservlets.model.entity.Service;
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.model.entity.enums.Role;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+
+
+
+import com.beautysalon.model.DAO.ServiceDAO;
+import com.beautysalon.model.DAO.UserDAO;
+import com.beautysalon.model.entity.Service;
+import com.beautysalon.model.entity.User;
+import com.beautysalon.model.entity.enums.Role;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static com.example.beautysaloneeservlets.constants.globalConstants.*;
+import static com.beautysalon.constants.globalConstants.*;
 
 
 public class MainMasterCommand implements Command {

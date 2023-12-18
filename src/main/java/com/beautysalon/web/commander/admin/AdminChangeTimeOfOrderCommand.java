@@ -1,9 +1,11 @@
-package com.example.beautysaloneeservlets.web.commander.admin;
+package com.beautysalon.web.commander.admin;
 
-import com.example.beautysaloneeservlets.model.DAO.OrderDAO;
-import com.example.beautysaloneeservlets.model.entity.Order;
-import com.example.beautysaloneeservlets.web.commander.Command;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+
+
+import com.beautysalon.model.DAO.OrderDAO;
+import com.beautysalon.model.entity.Order;
+import com.beautysalon.web.commander.Command;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,7 +14,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.example.beautysaloneeservlets.web.commander.OrderDateCommand.INVALID_DATE_PARAMETER;
+import static com.beautysalon.web.commander.OrderDateCommand.INVALID_DATE_PARAMETER;
+
 
 public class AdminChangeTimeOfOrderCommand implements Command {
 

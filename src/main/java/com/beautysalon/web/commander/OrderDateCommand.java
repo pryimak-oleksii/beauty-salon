@@ -1,6 +1,6 @@
-package com.example.beautysaloneeservlets.web.commander;
+package com.beautysalon.web.commander;
 
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

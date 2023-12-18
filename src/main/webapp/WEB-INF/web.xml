@@ -21,7 +21,7 @@
 
     <filter>
         <filter-name>LanguageFilter</filter-name>
-        <filter-class>com.example.beautysaloneeservlets.filter.LanguageFilter</filter-class>
+        <filter-class>com.beautysalon.filter.LanguageFilter</filter-class>
     </filter>
 
     <filter-mapping>
@@ -32,7 +32,7 @@
 
     <filter>
         <filter-name>AuthorizationFilter</filter-name>
-        <filter-class>com.example.beautysaloneeservlets.filter.AuthorizationFilter</filter-class>
+        <filter-class>com.beautysalon.filter.AuthorizationFilter</filter-class>
     </filter>
 
     <filter-mapping>
@@ -47,7 +47,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
-        <servlet-class>com.example.beautysaloneeservlets.servlets.DispatcherServlet</servlet-class>
+        <servlet-class>com.beautysalon.servlets.DispatcherServlet</servlet-class>
     </servlet>
     <error-page>
         <error-code>404</error-code>

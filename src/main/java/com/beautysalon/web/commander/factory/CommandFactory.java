@@ -1,16 +1,17 @@
-package com.example.beautysaloneeservlets.web.commander.factory;
+package com.beautysalon.web.commander.factory;
 
-import com.example.beautysaloneeservlets.model.DAO.OrderDAO;
-import com.example.beautysaloneeservlets.model.DAO.ServiceDAO;
-import com.example.beautysaloneeservlets.model.DAO.UserDAO;
-import com.example.beautysaloneeservlets.web.commander.*;
-import com.example.beautysaloneeservlets.web.commander.admin.AdminChangeStatusOfOrderCommand;
-import com.example.beautysaloneeservlets.web.commander.admin.AdminChangeTimeOfOrderAcceptCommand;
-import com.example.beautysaloneeservlets.web.commander.admin.AdminChangeTimeOfOrderCommand;
-import com.example.beautysaloneeservlets.web.commander.admin.AdminCommand;
-import com.example.beautysaloneeservlets.web.commander.master.MasterCommand;
-import com.example.beautysaloneeservlets.web.commander.master.MasterServiceAcceptCommand;
-import com.example.beautysaloneeservlets.web.commander.utils.Operation;
+
+import com.beautysalon.model.DAO.OrderDAO;
+import com.beautysalon.model.DAO.ServiceDAO;
+import com.beautysalon.model.DAO.UserDAO;
+import com.beautysalon.web.commander.*;
+import com.beautysalon.web.commander.admin.AdminChangeStatusOfOrderCommand;
+import com.beautysalon.web.commander.admin.AdminChangeTimeOfOrderAcceptCommand;
+import com.beautysalon.web.commander.admin.AdminChangeTimeOfOrderCommand;
+import com.beautysalon.web.commander.admin.AdminCommand;
+import com.beautysalon.web.commander.master.MasterCommand;
+import com.beautysalon.web.commander.master.MasterServiceAcceptCommand;
+import com.beautysalon.web.commander.utils.Operation;
 
 import java.util.HashMap;
 import java.util.Map;

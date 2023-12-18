@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.web.utils;
+package com.beautysalon.web.utils;
 
 public class Utils {
 

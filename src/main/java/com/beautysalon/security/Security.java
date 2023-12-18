@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.security;
+package com.beautysalon.security;
 
 //import org.apache.commons.codec.binary.Hex;
 //import org.apache.commons.validator.routines.EmailValidator;
@@ -19,7 +19,7 @@ public class Security {
      */
     public static boolean isEmailValid(String email) {
         final String regex = "^[a-zA-Z\\d_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z\\d.-]+$";
-        Pattern pattern = java.util.regex.Pattern.compile(regex);
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
@@ -31,9 +31,11 @@ public class Security {
      */
     public static boolean isPasswordValid(final String password) {
         final String regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
-        Pattern pattern = java.util.regex.Pattern.compile(regex);
-        java.util.regex.Matcher matcher = pattern.matcher(password);
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
+
+    // TODO hash pass to two different sides and keep hash pass in DB
 
 }

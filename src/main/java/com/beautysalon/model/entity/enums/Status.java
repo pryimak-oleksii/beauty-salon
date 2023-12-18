@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.model.entity.enums;
+package com.beautysalon.model.entity.enums;
 
 public enum Status {
     CREATED,

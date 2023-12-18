@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.model.entity;
+package com.beautysalon.model.entity;
 
 public abstract class Entity {
 

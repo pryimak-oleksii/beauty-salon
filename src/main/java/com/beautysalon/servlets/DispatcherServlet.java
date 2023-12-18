@@ -1,8 +1,10 @@
-package com.example.beautysaloneeservlets.servlets;
+package com.beautysalon.servlets;
 
-import com.example.beautysaloneeservlets.web.commander.Command;
-import com.example.beautysaloneeservlets.web.commander.factory.CommandFactory;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+
+
+import com.beautysalon.web.commander.Command;
+import com.beautysalon.web.commander.factory.CommandFactory;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

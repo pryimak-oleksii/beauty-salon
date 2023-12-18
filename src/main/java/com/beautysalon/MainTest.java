@@ -1,14 +1,16 @@
-package com.example.beautysaloneeservlets;
+package com.beautysalon;
 
-import java.lang.reflect.Array;
-import java.text.ParseException;
-import java.util.Arrays;
-import java.util.Calendar;
+import com.beautysalon.model.DAO.ServiceDAO;
+import com.beautysalon.model.entity.Service;
 
 public class MainTest {
     public static void main(String[] args)
 //            throws ParseException
     {
+
+        ServiceDAO serviceDAO = new ServiceDAO();
+        Service service = serviceDAO.getServiceByName("Миникюр");
+        System.out.println(service.getName());
 //        String sDate1 = "2022-09-13";
 //        Calendar calendar = Calendar.getInstance();
 //

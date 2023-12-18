@@ -1,25 +1,17 @@
-package com.example.beautysaloneeservlets.web.commander;
+package com.beautysalon.web.commander;
 
-//import controller.command.utils.CommandUtil;
-//import controller.command.utils.ValidationData;
-//import model.entity.Person;
-//import model.exception.AlreadyExistPersonException;
-//import model.exception.ServiceException;
-//import model.exception.WrongDataException;
-//import service.PersonService;
-//import service.factory.ServiceFactory;
 
-import com.example.beautysaloneeservlets.model.DAO.UserDAO;
-import com.example.beautysaloneeservlets.model.entity.User;
-import com.example.beautysaloneeservlets.model.entity.enums.Role;
-import com.example.beautysaloneeservlets.web.commander.utils.CommandUtil;
+import com.beautysalon.model.DAO.UserDAO;
+import com.beautysalon.model.entity.User;
+import com.beautysalon.model.entity.enums.Role;
+import com.beautysalon.web.commander.utils.CommandUtil;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
-import static com.example.beautysaloneeservlets.security.Security.isEmailValid;
-import static com.example.beautysaloneeservlets.security.Security.isPasswordValid;
+import static com.beautysalon.security.Security.isEmailValid;
+import static com.beautysalon.security.Security.isPasswordValid;
 
 
 public class RegistrationCommand implements Command {
@@ -87,12 +79,7 @@ public class RegistrationCommand implements Command {
                 String page = CommandUtil.getPersonPageByRole(user);
 
                 CommandUtil.goToPage(req, resp, page);
-//            } catch (NotFoundPersonException e) {
-//                req.setAttribute("notFound", true);
-//                CommandUtil.goToPage(req, resp, "/WEB-INF/view/login.jsp");
-//            } catch (WrongDataException e) {
-//                req.setAttribute("wrongData", true);
-//                CommandUtil.goToPage(req, resp, "/WEB-INF/view/login.jsp");
+
             } catch (Exception e) {
                 req.setAttribute(ERROR_ATTRIBUTE, true);
                 CommandUtil.goToPage(req, resp, REGISTRATION_VIEW_PATH);

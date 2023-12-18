@@ -1,4 +1,4 @@
-package com.example.beautysaloneeservlets.model.entity;
+package com.beautysalon.model.entity;
 
 import java.math.BigDecimal;
 

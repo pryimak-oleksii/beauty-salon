@@ -1,6 +1,5 @@
-package com.example.beautysaloneeservlets;
+package com.beautysalon;
 
-import javax.servlet.Servlet;
 import javax.servlet.http.HttpServlet;
 
 public class Test extends HttpServlet {
